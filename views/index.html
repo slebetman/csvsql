@@ -1,5 +1,16 @@
 <html>
+<head>
+	<script>
+		window.$ = window.jQuery = require('jquery');
+
+		const electron = require('electron');
+		
+		electron.ipcRenderer.on('openfile', (event, filename) => {
+			$('#file').text(filename);
+		})
+	</script>
+</head>
 <body>
-	<h1>Hello World</h1>
+	<div id="file"></div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const electron = require('electron');
+const menu = require('./lib/menu');
 const app = electron.app;
 
 app.on('ready',() => {
@@ -12,4 +13,5 @@ app.on('ready',() => {
 	});
 
 	win.loadFile('views/index.html');
+	electron.Menu.setApplicationMenu(menu(app, win));
 });
