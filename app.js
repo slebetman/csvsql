@@ -9,7 +9,8 @@ app.on('ready',() => {
 		height: 600,
 		webPreferences: {
 			nodeIntegration: true
-		}
+		},
+		backgroundColor: '#d9d9d9'
 	});
 
 	win.loadFile('views/index.html');
